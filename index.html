@@ -5,18 +5,38 @@
 	<title>exllcc</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="assets/shortcuticon.ico">
-	<script src="js/jquery.js" tppabs="/js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 	<script src="js/title.js" tppabs="/js/title.js"></script>
+	<script src="js/preloader.js"></script>
 </head>
 <body>
-	<div class="header">
-		<img class="logo" src="assets/logo.png">
+	<div id="preloader">
+  		<div id="status">&nbsp;</div>
 	</div>
-
+	<div class="button js-button-campaign">
+		<div class="header">
+			<img class="logo" src="assets/logo.png">
+		</div>
+	</div>
 	<div class="btns">
-		<a class="btn _inst" href="https://www.instagram.com/exl1psecc/" target="_blank">instagram</a>
-		<a class="btn _twitch" href="https://www.twitch.tv/exl1psecc" target="_blank">twitch</a>
-		<a class="btn _vk" href="https://vk.com/exllcc" target="_blank">vkontakte</a>
+		<a class="btn _inst" href="#">instagram</a>
+		<a class="btn _twitch" href="#">twitch</a>
+		<a class="btn _vk" href="#">vkontakte</a>
 	</div>
+	<div class="overlay js-overlay-campaign">
+		<div class="popup js-popup-campaign">
+			<span class="head"><p>Creator</p></span>
+			<span class="info"><p>exllcc (exl1pse)</p></span>
+				<button class="btn close-popup js-close-campaign">
+					ladno
+				</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$("html").on("contextmenu", false);
+	</script>
+	<script src="js/modal.js"></script>
 </body>
 </html>

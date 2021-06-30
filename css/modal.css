@@ -57,7 +57,6 @@
 
 .close-popup {
 	position: absolute;
-	background: #0F0F0F;
   	width: 578px;
   	height: 60px;
   	position: absolute;
@@ -74,4 +73,8 @@
 .close-popup:hover {
 	border: 0px solid #738E81;
 	background-color: #141414;
+}
+
+.close-popup:active {
+	background-color: #121212;
 }

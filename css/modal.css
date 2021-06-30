@@ -35,7 +35,7 @@
 	top: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, .3);
-	backdrop-filter: blur(21px);
+	backdrop-filter: blur(50px);
 	display: none;
 	z-index: 999;
 }
@@ -43,7 +43,7 @@
 .popup {
 	position: absolute;
 	width: 600px;
-	height: 400px;
+	height: 83px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -58,7 +58,7 @@
 .close-popup {
 	position: absolute;
 	background: #0F0F0F;
-  	width: 96.6%;
+  	width: 578px;
   	height: 60px;
   	position: absolute;
   	bottom: 10px;
@@ -74,11 +74,4 @@
 .close-popup:hover {
 	border: 0px solid #738E81;
 	background-color: #141414;
-}
-
-@media screen and (max-width: 768px) {
-	.popup {
-		width: 90%;
-		height: 90vh;
-	}
 }

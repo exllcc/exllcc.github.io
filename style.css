@@ -74,6 +74,7 @@ a {
 
 .btn:active {
     background-color: #222222;
+    transform: scale(.95);
 }
 
 ._tg {

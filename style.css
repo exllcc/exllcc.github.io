@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111;
+    z-index: 99;
+}
+
+body {
+    background-color: #111111;
+    background-image: url('assets/background.svg');
+    overflow: hidden;
+}
+
+*::selection {
+    color: rgb(0, 0, 0); /* Цвет текста */
+    background: rgb(121, 121, 121); /* Цвет фона */
+   }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    height: 20px;
+}
+
+.c_notallowed {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 25px 40px;
+    transition: 0.3s;
+}
+
+.nav_links a {
+    font-family: Josefin Sans;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.31em;
+    color: #DEDEDE;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/**.nav_links a { transition: 0.3s; }
+.nav_links:hover li:not(:hover) a { opacity: .3; }
+**/
+
+.links {
+    position: absolute;
+    text-align: center;
+    bottom: 60%;
+    width: 100%;
+}
+
+.text-transp {
+    font-family: Consolas;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.11em;
+    color: #585858;
+    text-decoration: none;
+    bottom: 1px;
+    transition: 0.3s;
+}
+
+.text-transp a {
+    color: #623F6B;
+    transition: 0.3s;
+}
+
+.text-transp a:hover {
+    color: #aa6db9;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+/**
+.nav_links li:hover ul.s_links {
+    top: 90px;
+    visibility: visible;
+}
+
+.s_links {
+    position: absolute;
+    text-align: center;
+    background-color: #131313;
+    top: -200px;
+    visibility: hidden;
+    border: 2px solid #1A1A1A;
+    box-sizing: border-box;
+    box-shadow: 0px 17px 36px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.s_links li {
+    display: block;
+    padding: 10px 17px;
+    transition: 0s ease-out;
+}
+
+.s_links a {
+    transition: 0s ease-out;
+}
+**/
+
+.btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btns a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: #1C1C1C;
+    margin: 20px;
+    border-radius: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.00);;
+}
+
+.btns a:hover {
+    background: #161616;
+    transform: scale(1.1);
+    border: 1px solid #2b2b2b;
+    box-sizing: border-box;
+}
+
+.btns a:active {
+    background: #171717;
+    transform: scale(.85);
+}
+
+
+.btns a i {
+    color: #636363;
+    font-size: 20px;
+    margin-top: 14px;
+}
+
+.btns a:hover .fa-vk {
+    color: #2787F5;
+}
+
+.btns a:hover .fa-telegram-plane {
+    color: #08c;
+}
+
+.btns a:hover .fa-instagram {
+    color: #C13584;
+}
+
+.btns a:hover .fa-steam {
+    color: #3b4355;
+}
+
+.btns a:active .fa-vk {
+    color: #15467e;
+    transition: 0.3s;
+}
+
+.btns a:active .fa-telegram-plane {
+    color: rgb(1, 72, 107);
+    transition: 0.3s;
+}
+
+.btns a:active .fa-instagram {
+    color: #5e1a40;
+    transition: 0.3s;
+}
+
+.btns a:active .fa-steam {
+    color: #171A21;
+    transition: 0.3s;
+}
+
+/*адаптация при маленькой ширине*/
+@media (min-width:0px) and (max-width:850px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0%;
+        height: 20px;
+    }
+    
+    .nav_links li {
+        display: inline;
+        padding: 0px 40px;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .logo {
+        cursor: pointer;
+        position: absolute;
+        top: 17%;
+        left: 25%;
+        width: 50%;
+        z-index: 1;
+    }
+
+    .links {
+        bottom: 65%;
+        width: 100%;
+        height: 80px;
+        display: none;
+    }
+    
+    .btns {
+        top: 65%;
+    }
+
+    .btns a{
+        display: block;
+        height: 65px;
+        width: 480px;
+        margin: 40px;
+        border-radius: 10px;
+        background: #111111;
+        border: 2px solid #2b2b2b5e;
+    }
+
+    .btns a:hover{
+        background: #161616;
+        transform: scale(1);
+        border: 2px solid #2b2b2b;
+        box-sizing: border-box;
+    }
+
+    .btns a i {
+        color: #636363;
+        font-size: 34px;
+        margin-top: 13px;
+    }
+}
+
+/**адабтация для мобильных устройств**/
+@media screen and (max-device-width: 1500px) {
+    .nav_links {
+        display: none;
+    }
+    
+    .logo {
+        cursor: pointer;
+        position: absolute;
+        top: 17%;
+        left: 25%;
+        width: 50%;
+        z-index: 1;
+    }
+
+    .links {
+        bottom: 65%;
+        width: 100%;
+        height: 80px;
+        display: none;
+    }
+    
+    .btns {
+        top: 65%;
+    }
+
+    .btns a{
+        display: block;
+        height: 110px;
+        width: 700px;
+        margin: 40px;
+        border-radius: 10px;
+        background: #111111;
+        border: 2px solid #4646465e;
+    }
+
+    .btns a:hover{
+        background: #161616;
+        transform: scale(1);
+        border: 3px solid #2b2b2b;
+        box-sizing: border-box;
+    }
+
+    .btns a i {
+        color: #636363;
+        font-size: 50px;
+        margin-top: 28px;
+    }
+    .copyright {
+        width: 100%;
+        height: 90px;
+    }
+
+    .text-transp {
+        font-size: 22px;
+    }
+}

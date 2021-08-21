@@ -278,7 +278,7 @@ header {
     }
 }
 
-/**адабтация для мобильных устройств**/
+/**адаптация для мобильных устройств**/
 @media screen and (max-device-width: 1500px) {
     .nav_links {
         display: none;
